@@ -48,3 +48,25 @@ The EF.SOD is digitally signed by the issuing state/organization
 It contains the hash algorithms and hash values of each data group
 For LDS v1.7 it does not include LDS/Unicode version info, but v1.8 does
 It allows validation of integrity of data created by the issuer and stored in the LDS1 application
+
+
+### Summary
+Electronic passports (ePassports) contain an embedded contactless integrated circuit (chip) that stores passport holder data in a standardized logical format defined by ICAO.
+
+The data is organized into "Data Groups" that can contain things like photos, fingerprints, personal details, travel records, etc.
+
+The standard defines 16 possible Data Groups, but not all may be used by every passport issuing country.
+
+Biometrics like photos and fingerprints are stored in encoded template formats like JPEG for photos and ISO fingerprint standards.
+
+Travel records of entry/exit stamps can be digitally stored.
+
+Issuing countries can optionally add proprietary extra data in Data Groups 13-16.
+
+Data integrity is ensured through cryptographic hashes of each Data Group stored in the Document Security Object (EF.SOD).
+
+Multiple applications can be supported like travel records, visas, additional biometrics.
+
+Files, records and templates follow defined structures to enable global interoperability.
+
+As a mobile dev, I'd focus on the key biometric and travel record Data Groups, their encoding formats, and authentication methods using the Document Security Object.
