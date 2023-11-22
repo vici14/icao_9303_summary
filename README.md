@@ -96,3 +96,29 @@ The nature of data is identity-related biographic and biometric information abou
 Files, records and templates follow defined structures to enable global interoperability.
 
 As a mobile dev, I'd focus on the key biometric and travel record Data Groups, their encoding formats, and authentication methods using the Document Security Object.
+
+
+1.3) What is nature of data stored on each data filed?
+
+
+The data stored in each specific data field/data group on the ePassport chip has the following nature:
+
+Data Group 1 (DG1): Contains the machine readable zone (MRZ) data in the same format as printed on the passport.
+
+Data Group 2 (DG2): Contains facial image(s) of the holder encoded as biometric template(s) following ISO photo standards.
+
+Data Group 3 (DG3): Optionally contains fingerprint image(s) of the holder encoded as biometric template(s) following ISO fingerprint standards.
+
+Data Group 4 (DG4): Optionally contains iris image(s) of the holder encoded as biometric template(s) following ISO iris standards.
+
+Data Groups 5-7 (DG5-DG7): Optionally contain displayed image(s) like photo, signature encoded in JPEG/image format.
+
+Data Group 8 (DG8): Reserved for future use/proprietary data defined by issuer.
+
+Data Groups 9-12 (DG9-DG12): Contain additional identity details like personal details, document details, etc.
+
+Data Groups 13-16 (DG13-DG16): Reserved for optional/proprietary data defined by issuing country.
+
+EF.SOD: Contains cryptographic hashes of each data group to validate data integrity.
+
+So in summary, the nature of data is identity-related biographic information, biometric images/templates, displayed images, and travel records - all organized into standardized data structures and encoding formats.
