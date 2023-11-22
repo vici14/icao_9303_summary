@@ -122,3 +122,21 @@ Data Groups 13-16 (DG13-DG16): Reserved for optional/proprietary data defined by
 EF.SOD: Contains cryptographic hashes of each data group to validate data integrity.
 
 So in summary, the nature of data is identity-related biographic information, biometric images/templates, displayed images, and travel records - all organized into standardized data structures and encoding formats.
+
+1.4) is data in chip encrypted?
+No, the data stored on the contactless chip inside an electronic passport/eMRTD is not directly encrypted. However, the document and data does have security protections:
+
+The chip data is digitally signed by the issuing authority to validate integrity and prevent tampering.
+
+Cryptographic protocols like Basic Access Control (BAC), Password Authenticated Connection Establishment (PACE), and Active Authentication (AA) are used to securely authenticate communication and access to the chip data.
+
+Optional advanced security mechanisms defined in ICAO Doc 9303-11 like Chip Authentication and Terminal Authentication can also be implemented.
+
+Read access to the data requires knowledge of the correct cryptographic keys and authentication.
+
+The data is static and write-protected after issuance to prevent unauthorized modification.
+
+So while the raw chip data itself is stored in plain/clear form, secure cryptographic access controls and digital signatures are used to protect the integrity and confidentiality of the stored identity and travel information. Encryption of the stored data itself is not a requirement as per the ICAO standards.
+
+The security goal is to prevent unauthorized reading/writing while allowing legitimate authenticated access, rather than encrypting the static stored data payload.
+
