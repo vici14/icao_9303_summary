@@ -1,7 +1,9 @@
 # icao_9303_summary
-reference to 9303 p10:https://www.icao.int/publications/documents/9303_p10_cons_en.pdf
+
+reference to 9303 p10: https://www.icao.int/publications/documents/9303_p10_cons_en.pdf
 
 1.1)Which data fields have data on chip
+
 4.7.1 DATA GROUP 1 — Machine Readable Zone Information (MANDATORY) - Contains the machine readable zone (MRZ) data, which reflects the information printed on the MRZ of the passport.
 
 4.7.2 DATA GROUP 2 — Encoded Identification Features — Face (MANDATORY) - Contains one or more facial image(s) of the passport holder, encoded in a biometric template format.
@@ -66,6 +68,30 @@ Issuing countries can optionally add proprietary extra data in Data Groups 13-16
 Data integrity is ensured through cryptographic hashes of each Data Group stored in the Document Security Object (EF.SOD).
 
 Multiple applications can be supported like travel records, visas, additional biometrics.
+
+1.2) What is nature of data stored on chip?
+
+The data stored on the contactless chip in an electronic passport/travel document (ePassport/eMRTD) is defined by the Logical Data Structure (LDS) specification. The key points about the nature of this data are:
+
+It is primarily biographic and biometric identity data about the passport holder. This includes things like name, date of birth, nationality, photos, fingerprints etc.
+
+It also includes some document data like passport number, issuing country, expiration date etc.
+
+Optional data like additional personal details, displayed images, travel records can also be included.
+
+The data has a standardized logical structure divided into Data Groups for global interoperability.
+
+Biometrics and images are encoded in standardized biometric template formats.
+
+The data is digitally signed by the issuing authority to ensure integrity.
+
+It is static/non-modifiable after issuance to prevent tampering.
+
+The intent is to allow machine-assisted identity verification of the holder.
+
+It also facilitates automated border/migration processes using the stored identity/travel data.
+
+The nature of data is identity-related biographic and biometric information about the holder, following set logical structures and encoding formats defined in international standards. Its purpose is to enable global electronic verification of travel documents.
 
 Files, records and templates follow defined structures to enable global interoperability.
 
