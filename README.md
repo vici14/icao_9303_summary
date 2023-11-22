@@ -2,7 +2,7 @@
 
 reference to 9303 p10: https://www.icao.int/publications/documents/9303_p10_cons_en.pdf
 
-1.1)Which data fields have data on chip
+1.1)**Which data fields have data on chip**
 
 4.7.1 DATA GROUP 1 — Machine Readable Zone Information (MANDATORY) - Contains the machine readable zone (MRZ) data, which reflects the information printed on the MRZ of the passport.
 
@@ -69,7 +69,7 @@ Data integrity is ensured through cryptographic hashes of each Data Group stored
 
 Multiple applications can be supported like travel records, visas, additional biometrics.
 
-1.2) What is nature of data stored on chip?
+**1.2) What is nature of data stored on chip?**
 
 The data stored on the contactless chip in an electronic passport/travel document (ePassport/eMRTD) is defined by the Logical Data Structure (LDS) specification. The key points about the nature of this data are:
 
@@ -98,7 +98,7 @@ Files, records and templates follow defined structures to enable global interope
 As a mobile dev, I'd focus on the key biometric and travel record Data Groups, their encoding formats, and authentication methods using the Document Security Object.
 
 
-1.3) What is nature of data stored on each data filed?
+**1.3) What is nature of data stored on each data filed?**
 
 
 The data stored in each specific data field/data group on the ePassport chip has the following nature:
@@ -123,7 +123,8 @@ EF.SOD: Contains cryptographic hashes of each data group to validate data integr
 
 So in summary, the nature of data is identity-related biographic information, biometric images/templates, displayed images, and travel records - all organized into standardized data structures and encoding formats.
 
-1.4) is data in chip encrypted?
+**1.4) is data in chip encrypted?**
+
 No, the data stored on the contactless chip inside an electronic passport/eMRTD is not directly encrypted. However, the document and data does have security protections:
 
 The chip data is digitally signed by the issuing authority to validate integrity and prevent tampering.
